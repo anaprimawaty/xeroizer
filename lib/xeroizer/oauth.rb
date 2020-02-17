@@ -30,6 +30,7 @@ module Xeroizer
     class ConsumerKeyUnknown < OAuthError; end
     class NonceUsed < OAuthError; end
     class OrganisationOffline < OAuthError; end
+    class SignatureInvalid < OAuthError; end
     class Forbidden < OAuthError; end
     class UnknownError < OAuthError; end
 

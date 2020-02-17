@@ -40,6 +40,7 @@ module Xeroizer
         when "consumer_key_unknown"         then raise OAuth::ConsumerKeyUnknown.new(description)
         when "nonce_used"                   then raise OAuth::NonceUsed.new(description)
         when "organisation offline"         then raise OAuth::OrganisationOffline.new(description)
+        when "signature_invalid"            then raise OAuth::SignatureInvalid.new(description)
         else raise OAuth::UnknownError.new(problem + ':' + description)
         end
       else
